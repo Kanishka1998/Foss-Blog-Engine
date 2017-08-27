@@ -1,0 +1,3 @@
+[run]
+source = Fstival
+omit = Fstival/test*

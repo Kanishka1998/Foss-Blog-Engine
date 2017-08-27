@@ -1,0 +1,463 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+#example1 {
+    background-image: url(../static/fossblog.jpeg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    width : 1300;
+    height : 200;
+    padding: 150px;
+}
+
+#box{
+  background-position: center;
+  width: 1000;
+  height:2000;
+  padding: 200px;
+  background-color: #FFE4B5 ;
+  margin-left: 125px;
+  
+}
+.div2 {
+    float:right;
+}
+#sample{
+  background-color: blue;
+
+}
+</style>
+<title>FOSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:brown">
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/post">Post Comment</a>
+  <a href="/view">View Comment</a>
+  <a href="/">Logout</a>
+  <h4  style="color:white; float:right; margin-right:20px" >{{ one.username }}</h4>
+  
+</div>
+<div id="example1">
+
+</div>
+<div style="padding-left:16px">
+  <b><center><h1 style="color:yellow;" >Hi, {{ one.username }} Welcome to the world of FOSS</h1></center></b>
+<br>
+<br>
+<h2 style="color:Cornsilk;">&nbsp;Free Open Source Software</h2>
+<br>
+<br>
+
+<div class="box">
+      
+    <div style="text-align:center"><img src="../static/user_foss.jpg"></div>
+
+    <h3 style="color:Cornsilk;">Free Open Source Software. A leading feature now-a-days.</h3>
+</div>
+<div id="box">
+<div class="box">
+  <h2>Linux Distributions</h2>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><b>For new comers</b></a>
+        </h4>
+      </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+	                <li class="list-group-item"><a href="https://www.ubuntu.com/" target="_blank">Ubuntu</a>
+ 			<li class="list-group-item"><a href="https://www.linuxmint.com/" target="_blank">Linux Mint</a>
+			<li class="list-group-item"><a href="https://www.pclinuxos.com/" target="_blank">PCLinuxOS</a>
+
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b>For intermediate users</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse2" class="panel-collapse collapse">
+      <ul class="list-group">
+    
+        
+        <ul>
+			<li class="list-group-item"><a href="https://getfedora.org/" target="_blank">Fedora</a>
+ 			 <li class="list-group-item"><a href="https://www.debian.org/" target="_blank">Debian</a>
+
+        </ul>
+    </ul>
+   </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" ><b>For advanced users</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse3" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+			<li class="list-group-item"><a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>
+			<li class="list-group-item"><a href="www.slackware.com/" target="_blank">Slackware</a>
+
+        </ul>
+    </ul>
+   </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><b>For servers</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse4" class="panel-collapse collapse">
+      <ul class="list-group">
+    
+      
+        <ul>
+			<li class="list-group-item"><a href="https://www.centos.org/" target="_blank">CentOS</a>
+			<li class="list-group-item"><a href="https://www.debian.org/" target="_blank">Debian</a>
+			<li class="list-group-item"><a href="https://www.opensuse.org/" target="_blank">Open SUSE</a>
+            
+        </ul>
+    </ul>
+  </div>
+ </div>
+
+    
+   </div>
+</div>
+
+<div class="box">
+    <h2>Open Source Web Development Tools</h2>
+<div class="panel-group" id="accordion1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse5" data-parent="#accordion1"><b>Node.js</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse5" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            	<li><a href="https://nodejs.org/" target="_blank">Official website</a>
+		<li><a href="https://goo.gl/images/hgTh6x" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse6" data-parent="#accordion1"><b>AngularJS</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse6" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+		<li><a href="https://angularjs.org/" target="_blank">Official website</a>
+		<li><a href="https://goo.gl/images/u9mKZH" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse7" data-parent="#accordion1"><b>Bootstrap</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse7" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+             <li><a href="http://getbootstrap.com/'" target="_blank">Official website</a>
+	    <li><a href="https://goo.gl/images/kMaUZM" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse8" data-parent="#accordion1"><b>XAMPP</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse8" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="https://www.apachefriends.org/" target="_blank">Official website</a>
+	    <li><a href="https://goo.gl/images/J14diZ" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse9" data-parent="#accordion1"><b>Text Editors</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse9" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="http://brackets.io/" target="_blank">Brackets</a>
+	    <li><a href="https://atom.io/" target="_blank">Atom</a></li>
+	    <li><a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>	
+        </ul>
+    </ul>
+  </div>
+ </div>
+</div>
+</div>
+<div class="box">
+    <h2>Open Source Networking Tools</h2>
+<div class="panel-group" id="accordion2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse10" data-parent="#accordion2"><b>Cacti</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse10" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            	<li><a href="https://en.opensuse.org/Cacti" target="_blank">Official website</a>
+		<li><a href="https://xebialabs.com/technology/cacti/" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse11" data-parent="#accordion2"><b>Nagios
+
+</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse11" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+		<li><a href="https://www.nagios.org/" target="_blank">Official website</a>
+		<li><a href="https://exchange.nagios.org/directory/Graphics-and-Logos/Images-and-Logos" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse12" data-parent="#accordion2"><b>Icinga</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse12" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+             <li><a href="https://www.icinga.com/" target="_blank">Official website</a>
+	    <li><a href="https://www.icinga.com/product-tag/logo/" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse13" data-parent="#accordion2"><b>NeDi</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse13" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="https://www.nedi.ch/" target="_blank">Official website</a>
+	    <li><a href="https://www.snag-view.de/nedi-sv.html?language=en" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse14" data-parent="#accordion2"><b>Ntop</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse14" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="http://www.ntop.org/" target="_blank">Official website</a>
+            <li><a href="http://www.hostingtalk.it/intervista-a-luca-deri-fondatore-di-ntop/" target="_blank">Logo</a>	
+        </ul>
+    </ul>
+  </div>
+ </div>
+</div>
+</div>
+<div class="box">
+    <h2>Open Source Machine Learning Tools</h2>
+<div class="panel-group" id="accordion3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse15" data-parent="#accordion3"><b>Apache Singa</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse15" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            	<li><a href="https://singa.incubator.apache.org/" target="_blank">Official website</a>
+		<li><a href="https://svn.apache.org/repos/infra/websites/staging/singa/trunk/content/develop/schedule.html" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse16" data-parent="#accordion3"><b>Shogun</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse16" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+		<li><a href="http://www.shogun-toolbox.org/" target="_blank">Official website</a>
+		<li><a href="https://www.brandsoftheworld.com/logo/shogun-0" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse17" data-parent="#accordion3"><b>Apache Mahout</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse17" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+             <li><a href="https://mahout.apache.org/" target="_blank">Official website</a>
+	    <li><a href="http://blog.trifork.com/category/big_data_search/mahout/" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse18" data-parent="#accordion3"><b>Apache Spark MLlib</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse18" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="https://spark.apache.org/mllib/" target="_blank">Official website</a>
+	    <li><a href="https://spark.apache.org/mllib/" target="_blank">Logo</a>
+        </ul>
+    </ul>
+  </div>
+ </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+         <a data-toggle="collapse" href="#collapse19" data-parent="#accordion3"><b>TensorFlow</b></a>
+        </h4>
+      </div>
+
+ 
+    <div id="collapse19" class="panel-collapse collapse">
+      <ul class="list-group">
+        <ul>
+            <li><a href="https://www.tensorflow.org" target="_blank">Official website</a>
+	    <li><a href="https://www.tensorflow.org/" target="_blank">Logo</a>	
+        </ul>
+    </ul>
+  </div>
+ </div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+   
