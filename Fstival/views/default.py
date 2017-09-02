@@ -97,11 +97,26 @@ def postdb(request):
     request.dbsession.add(model)
     return render_to_response('../templates/post.jinja2',{'message':'Updated succesfully!!','one':one},request=request)
 
+@view_config(route_name='request', renderer='../templates/requestcomment.jinja2')
+def requestView(request):
+    global user
+    query = request.dbsession.query(User)
+    one=query.filter(User.username == uname).first()
+    return {'one':one}
+    
+    
+    
 
-@view_config(route_name='viewcomment', renderer='../templates/view.jinja2')
+
+@view_config(route_name='viewcomment', renderer='../templates/viewcomment.jinja2')
 def viewcomment(request):
-	obj=request.dbsession.query(Comment).filter().order_by(desc(Comment.datetime)).all()
-	return {'length':len(obj),'obj':obj}
+    query = request.dbsession.query(User)
+    one=query.filter(User.username == uname).first()
+    #items = request.dbsession.query(Comment).all()
+    topic = request.params['topic']
+    content=request.dbsession.query(Comment).filter(Comment.topic == topic)
+    return {'content':content,'one':one}
+    #return {'length':len(content),'content':content,'one':one}
 
 db_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
