@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+#example1 {
+    background-image: url(../static/FOSSBLOG.JPEG) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    width : 500;
+    height : 200;
+    padding: 100px;
+}
+#view {
+    background-color:#4CAF50;
+}
+</style>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/account">My Account</a>
+  <a href="/post">Post Comment</a>
+  <a href="/">Logout</a>
+  <h4  style="color:white; float:right; margin-right:20px" >{{ one.username }}</h4>
+</div>
+
+
+<div id="example1">
+
+
+
+</div>
+
+
+<h2>Newsfeed</h2>
+
+
+<!--<fieldset>
+<h2>username:${obj[0].email}</h2>
+
+<h3>content: ${obj[0].comment}</h3>
+
+</fieldset>
+<h1>{{ one.email }}</h1>-->
+<!--for item in items 
+  <table>
+  <tr>
+    <td>${item.email}</td>
+    <td>${item.comment}</td>
+  </tr>
+  </table>-->
+{% for c in content %}
+<div id = "view">
+    
+    <p>{{ c.email }}</p>
+    <p>{{ c.datetime }}</p>
+</div>
+    <h4 style = "float:center">{{ c.topic  }} </h4>
+    <h4><center>{{ c.comment }}</center></h4>
+
+<!-- begin wwww.htmlcommentbox.com -->
+   {% if c.topic == "Linux Distributions" %} 
+    <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a>loading comments...</div>
+    <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"),     l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1504362621492");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+   {% endif %}
+   
+
+
+   {% if c.topic == "Open Source Machine Learning Tools" %} 
+    <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a>loading comments...</div>
+    <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"),     l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1504362621492");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+   {% endif %}
+
+{% endfor %}    
+
+
+</body>
+</html>
